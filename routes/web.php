@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// product routes
 Route::resource('products', 'App\Http\Controllers\ProductController');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

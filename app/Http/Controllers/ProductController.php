@@ -48,7 +48,8 @@ class ProductController extends Controller
 
         $data = $request->except(['image']);
         $product = Product::create($data);
-
+        
+        // Storing the image using image Intervention pacakge
         if ($request->image) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
